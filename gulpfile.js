@@ -13,6 +13,14 @@ function scssTask(){
     .pipe(dest('dist', { sourcemaps: '.' }));
 }
 
+// Webfont Task for icons - need to figure this out laterz if there is time
+// function bootstrapFontsTask() {
+//     return src('node_modules/bootstrap-icons/font/bootstrap-icons.scss')
+//         .pipe(sass())
+//         .pipe(postcss([cssnano()]))
+//         .pipe(dest('dist', { sourcemaps: '.' }));
+// }
+
 // JavaScript Task
 function jsTask(){
   return src('app/js/app.js', { sourcemaps: true })
@@ -37,7 +45,7 @@ function browsersyncReload(cb){
 
 // Watch Task
 function watchTask(){
-  watch('*.html', browsersyncReload);
+  watch(['*.html', 'app/pages/*.html'], browsersyncReload);
   watch(['app/scss/**/*.scss', 'app/js/**/*.js'], series(scssTask, jsTask, browsersyncReload));
 }
 
@@ -45,6 +53,7 @@ function watchTask(){
 exports.default = series(
   scssTask,
   jsTask,
+  // bootstrapFontsTask,
   browsersyncServe,
   watchTask
 );

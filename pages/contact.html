@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAT</title>
+    <title>Pet Paradigm Professionals</title>
     <link rel="stylesheet" href="../dist/main.css">
     <!-- <link rel="stylesheet" href="dist/bootstrap-icons.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
-<body class="container-fluid">
+<body class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#"><img class="hero-img" src="../img/logo2.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,9 +25,9 @@
                 Pet Health & Wellness
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="dog.html">Dog</a>
-                <a class="dropdown-item" href="cat.html">Cat</a>
-                <a class="dropdown-item" href="small-animals.html">Small Animals</a>
+                <a class="dropdown-item" href="pages/dog.html">Dog</a>
+                <a class="dropdown-item" href="pages/cat.html">Cat</a>
+                <a class="dropdown-item" href="pages/small-animals.html">Small Animals</a>
               </div>
             </li>
             <li class="nav-item">
@@ -37,65 +37,83 @@
                 <a class="nav-link" href="#">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="faqs.html">FAQs</a>
+                <a class="nav-link" href="#">FAQs</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+           <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> --> 
           </form>
         </div>
     </nav>
-    <div class="container">
-        <section class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <h1 class="hero-title">CAT<span class="text-info"> HEALTH</span> & WELLNESS </h1>
-                <p class="section-intro mt-5">Cats were first domesticated around 7500 BCE in the western Asia region and are currently the second most popular domestic pet in the United States. While there are over 60 unique documented cat breeds, care and diet can differ between breeds. However, some diets and practices are generally recommended for the well-being of your fluffy family member regardless of breed.</p>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="dog-img-wrapper px-2">
-                    <img id="cheart-circle" src="../img/heart-circle.png" alt="heart circle">
-                    <img id="dpaw1" src="../img/paw1.png" alt="dog paw 1">
-                    <img id="orange-cat" src="../img/cat-orange.jpeg" alt="orange cat">
-                    <img id="fish-circle" src="../img/fish-circle.png" alt="fish circle">
-                    <img id="dpaw2" src="../img/paw1.png" alt="dog paw 2">
+    <div class="container-fluid bg-info">
+        <div class="row contact-form-wrapper">
+            <div class="col-12 mt-0 p-0">
+                <div class="text-center mt-5">
+                    <p class="text-white">Please fill out our contact form to request a consultation. We will contact you within 48 hours to schedule a consultation. 
+                    <em>*All fields are required*.</em></p>
                 </div>
-                
+                <form action="" class="contact-form bg-primary mb-5" >
+                    
+                    <div class="pt-3">
+                        <img src="../img/logo.png" class="old-logo" alt=""> 
+                        <h3 class="text-warning text-center">Consult with a PEXPERT!</h3> 
+                    </div>
+                    <div class="row">
+                        <div class="form-group col">
+                            <h5 class="text-white pt-3">Your information</h5>
+                            <label for="inputName" class="text-white">Full name</label>
+                            <input type="text" class="form-control" id="inputName" aria-describedby="name" placeholder="Enter full name">
+
+                            <label for="exampleInputEmail1" class="text-white">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-8 col-md-8 col-sm-12">
+                            <label for="inputPhone" class="text-white">Phone</label>
+                            <input type="phone" class="form-control" id="inputPhone" aria-describedby="phoneHelp" placeholder="(xxx)xxx-xxxx">
+                        </div>
+                        <div class="form-group col-lg-4 col-md-4 col-sm-12">
+                            <label for="inputTimezone" class="text-white">Timezone</label>
+                            <select id="inputTimezone" class="form-control">
+                                <option selected>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-12">
+                            <h5 class="text-white mt-5">Your Pet's info</h5>
+                            <label for="inputPetName" class="text-white">Pet name</label>
+                            <input type="text" class="form-control" id="inputPetName" aria-describedby="name" placeholder="Enter pet's name">
+                        </div>
+                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                            <label for="inputPetType" class="text-white">Pet Type</label>
+                            <select id="inputPetType" class="form-control">
+                                <option selected>Dog</option>
+                                <option>Cat</option>
+                                <option>Small Animal</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                            <label for="inputPetAge" class="text-white">Pet age</label>
+                            <input type="text" class="form-control" id="inputPetAge" aria-describedby="name" placeholder="Enter pet's age">
+                        </div>
+                        <h6 class="text-white mt-5">Tell us more about how we can help you!</h6>
+                        <div class="form-group col-12">
+                            <textarea class="form-control" id="tumTextArea" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-5 pb-5">
+                        <button type="submit" class="form-btn">Submit</button>
+                    </div>
+                </form>
             </div>
-        </section>
-        <section class="row">
-            <h3 class="section-title mb-2">Zero to Four Weeks</h3>
-            <p>It is important the queen (a term commonly used for a female cat that is either pregnant or nursing) directly nurse her young if possible. Monitor your kitten’s growth closely to make sure its growth rate is progressing steadily. If any kitten is not growing at a sufficient rate, a caretaker might need to feed the kitten directly either with a bottle or a feeding tube. Some reasons why kittens might not gain weight appropriately include the following: </p>
-            <ul>
-                <li>too many other siblings are competing for mom's milk </li>
-                <li>gastrointestinal disease</li>
-                <li>environmental conditions such as extreme heat or cold, or unsanitary conditions
-                </li>
-            </ul>
-        </section>
-        <section class="row">
-            <h3 class="section-title mb-2">Four Weeks to One Year</h3>
-            <p>Kittens can start being introduced to soft wet kitten food typically around three to four weeks after birth. According to the ASPCA, kittens at this age should eat half to one cup of dry kitten food or six to nine ounces of wet kitten food per day. If your kitten has difficulties eating hard food, a small amount of water can be added to soften the food. Cat food that is optimized for kittens provides the additional nutrients that are needed for growth, energy, and wellness. Depending on the breed, your cat may have different dietary requirements. You should always consult with your veterinarian for recommendations.</p>
-        </section>
-        <section class="row">
-            <h3 class="section-title mb-2">One Year to Seven Years</h3>
-            <p>This age is when kittens reach the cat stage and do not need as many nutrients. At this age, their level of activity decreases, and so does their metabolism. It is not recommended to leave food out for the cats all day. Instead, provide food a couple times a day so they eat meals rather than snacking throughout the day. This practice reduces the risk of obesity and other weight-related feline ailments.</p>
-        </section>
-        <section class="row">
-            <h3 class="section-title mb-2">Seven Years and More</h3>
-            <p>Much like many living organisms, the body begins to deteriorate and experience a lot of changes. Cats at this age should eat less fats and calories and more quality proteins. This means when you are purchasing packaged foods for your cat, look for food that states a particular protein (such as "salmon") and not just a category (such as fish). This usually means they are byproducts, or combinations, of lesser quality proteins.</p>
-        </section>
-        <section class="contact-banner d-flex">
-            <div class="banner-img-wrapper">
-                <img id="blue-fade-sparkle" src="../img/pink-sparkle.png" alt="blue fade sparkle">
-                <img id="pink-cat" src="../img/cat-pink-food.jpeg" alt="eating cat">
-            </div>
-            <div class="px-2">
-                <h1 class="text-white">Have questions about your pet? Schedule a new pet consulation today!</h1>
-                <button class="btn btn-light">GET IN TOUCH <span><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                </svg></span></button>
-            </div>
-        </section>
+        </div>
     </div>
     <footer class="d-flex mt-3 px-3">
         <div class="me-auto p-2">

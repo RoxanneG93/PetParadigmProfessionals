@@ -1,0 +1,34 @@
+.btn .btn-light {
+    
+}
+
+.form-btn{
+	display: inline-block;
+  	padding: .8em 2.5em;
+  	border-radius: 50px;
+	color: white;
+  	margin-top:2rem;
+  	font-weight: bold;
+  	font-size: 1rem;
+  	letter-spacing: 2px;
+  	text-transform: uppercase;
+  	text-decoration: none;
+	background: linear-gradient(to right, rgba(white, 0) 25%, rgba(white, 1) 75%);
+	background-position: 1% 50%;
+	background-size: 400% 300%;
+	border: 1px solid white;
+	@include transition;
+	
+	&:hover{
+		color: $primary;
+    	color: $primary;
+    	background-position: 99% 50%;
+	}
+}
+
+.btn {
+    padding: .8em 2.5em!important;
+  	border-radius: 50px!important;
+    text-transform: uppercase!important;
+  	text-decoration: none!important;
+}

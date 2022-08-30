@@ -10,12 +10,21 @@ $info: #6699CC;
 // $danger: #ff457b;
 // $dark: #18181d;
 
+$orange: #FFB661;
+$light-orange: #FFDF7B;
+
 $body-bg: #FFFFFF;
 $body-color: #1E1E1E;
+$other-color: #6C6C6C; // need to label these better
+
+$enable-cssgrid: true;
 
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+// @import '../../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
 @import './components/breakpoints.scss';
+@import './components/button.scss';
 @import './components/nav.scss';
+@import './components/form.scss';
 // $body-color: red;
 
 html, body {
@@ -24,31 +33,183 @@ html, body {
 
 
 
-// .include-media-test {
+section {
   
-// }
+  // overflow: hidden;
+  @include media("<=phone") {
+    border:5px solid lightseagreen;
+    
+    //font-size: 3.5rem;
+    
+  
+  }
+
+  @include media(">phone") {
+    border:5px solid purple;
+    font-size: 2rem;
+    margin: 20px 20px!important;
+    
+   
+  }
+
+  @include media(">=815px", "<desktop") {
+    border:5px solid green;
+    
+     
+  }
+
+  @include media(">=desktop") {
+    border:5px solid #fab;
+    margin: 100px 100px!important;
+    padding: 25px 25px;
+  }
+}
+
+.section-title {
+  font-size: 1.5em;
+  color: $primary;
+}
+
+section p {
+  font-size: .8em;
+}
+
+.section-intro {
+  font-size: .7em;
+}
+
+
+
+.hero-logo-img {
+  position: absolute;
+  max-width: 105px;
+  max-height: 105px;
+  
+  z-index: 2;
+
+  @include media("<=phone") {
+    border:5px solid lightseagreen;
+    //font-size: 3.5rem;
+    left: 560px;
+    top: 250px;
+    
+  
+  }
+ 
+
+  @include media(">phone") {
+    border:5px solid purple;
+    // font-size: 2rem;
+    // margin: 20px 20px!important;
+    left: 300px;
+    top: 250px;
+    
+   
+  }
+
+  @include media("<770px") {
+    border:5px solid palegoldenrod;
+    left: 560px;
+    top: 250px;
+  
+  }
+
+  @include media(">=815px", "<desktop") {
+    border:5px solid green;
+    left: 300px;
+    top: 250px;
+    
+     
+  }
+
+  @include media(">=desktop") {
+    border:5px solid #fab;
+    left: 500px;
+    top: 345px;
+    width: 65%;
+  }
+
+  @include media(">=1475") {
+    border:5px solid seagreen;
+    // left: 25rem;
+    // top: 5rem;
+    width: 65%;
+  }
+}
 
 
 .hero-img-wrapper {
   position: relative;
-  border: 1px solid pink;
+  display: flex;
+  flex-direction: row;
+  border: 5px solid pink;
+  // display: inline;
   // text-align: center;
+  @include media("<768px") {
+    border:5px solid purple;
+    margin-top: 100px;
   
+  }
+  
+}
+.pug-wrapper{
+  position: relative;
+  
+  min-height: 203px;
+  min-width: 152px;
+  width:40%;
+  left: 10%;
+  top: -5em;
+  height: auto;
+  border: 3px solid aqua;
+  @include media("<768px") {
+    border:5px solid purple;
+    //left: 0;
+  
+  }
+  
+}
+
+#sparkles1 {
+  position: relative;
+  max-width: 70px;
+  max-height: 74px;
+  z-index: 3;
+  width:100%;
+  top: 100px;
+  // width: 20%;
+}
+.pug-shape-wrapper {
+  position: relative;
+  
+  border: 3px solid sienna;
 }
 
 .pug-img {
   position: relative;
   min-height: 203px;
   min-width: 152px;
-  width:40%;
+  width:100%;
   height: auto;
-  right: 10rem;
+  // left: 5%;
+  
+  z-index: 1;
   // max-height: 414px;
   // max-width: 325px;
   border-radius: 2000px;
+  box-shadow: 12px 8px 0 0px white,
+  14px 6px 0 0px orange,
+  14px 10px 0 0px orange,
+  10px 10px 0 0px orange;
+
+  // border: 1px solid black;
+  // background-color: yellow;
+  
   @include media("<=phone") {
     border:5px solid lightseagreen;
-    right: 5rem;
+    //right: 5rem;
+
+
     // max-width: 159px;
     // max-height: 203px;
     
@@ -61,21 +222,17 @@ html, body {
 
   @include media(">phone") {
     border:5px solid purple;
-    right: 5rem;
+    //right: 5rem;
+
+
     // max-width: 159px;
     // max-height: 203px;
-    
-    // &:before {
-    //   content: ">phone";
-    // }    
+   
   }
 
   @include media(">=815px", "<desktop") {
     border:5px solid green;
     
-    // &:before {
-    //   content: ">=815px, <desktop";
-    // }    
   }
 
   @include media(">=desktop") {
@@ -83,111 +240,586 @@ html, body {
     max-height: 414px;
     max-width: 325px;
     
-    // &:before {
-    //   content: ">=desktop";
-    // }
   }
-  
-  @include media("retina2x") {
-    // &:after {
-    //   content: "Retina" !important;
-    // }    
-  }
+
 }
 
-.cat-img {
+.pug-outline {
   position: relative;
-  //top: 0;
-  // left: 325px;
-  top: 4em;
-  // left: 25rem;
-  min-height: 148px;
-  min-width: 148px;
-  width:30%;
-  height: auto;
-  
-  max-height: 303px;
-  max-width: 303px;
+  min-height: 203px;
+  min-width: 152px;
+  width:100%;
+  height: 100%;
+  border: 1px solid red;
+  box-shadow: 12px 8px 0 0px white,
+  14px 6px 0 0px yellow,
+  14px 10px 0 0px yellow,
+  10px 10px 0 0px yellow;
+  // outline-offset: 15px;
   border-radius: 2000px;
-  @include media("<=phone") {
-    border:5px solid lightseagreen;
-    top: 0;
-    //left: 10rem;
-    // max-height: 125px;
-    // max-width: 125px;
-    // left: 100px;
-    // max-width: 50px;
-    // max-height: 50px;
+}
+
+.pug-shape {
+  position: relative;
+ 
+  // border: 3px solid orange;
+  // border-radius: 2000px;
+
+  min-height: 203px;
+  min-width: 152px;
+  width:40%;
+  z-index: -1;
+  left: -6em;
+  // height: auto;
+
+  @include media(">=desktop") {
+    // border:5px solid #fab;
+    // max-height: 414px;
+    // max-width: 325px;
+    
+  }
   
-  }
+}
 
-  @include media(">phone") {
-    border:5px solid purple;
-    top: 0;
-    //left: 100px;
-    // max-width: 50px;
-    // max-height: 50px
 
-    // left: 14rem;
-   
-  }
+#paw1 {
+  position: relative;
+  max-width: 69.2px;
+  max-height: 51.74px;
+  // width: 20%;
+  // display: block;
+  z-index: 3;
+  // float: none;
+  // top: -6em;
+  // left: 8em;
 
+  // need one for big screens and for smaller screens
   @include media(">=815px", "<desktop") {
     border:5px solid green;
-    //top: 10rem;
-    // left: 20rem;
-    
-     
   }
 
   @include media(">=desktop") {
     border:5px solid #fab;
-    // top: 0;
-    // left: 100px;
+    // top: -0;
+    // left: -8em;
+  }
+  
+}
 
-    //top: 10rem;
-  // left: 25rem;
-  //   max-height: 303px;
-  //   max-width: 303px;
-    
+#paw2 {
+  position: relative;
+  max-width: 110.8px;
+  max-height: 82.84px;
+  // width: 20%;
+  // display: block;
+  z-index: 3;
+  // float: none;
+  // top: -6em;
+  // left: 8em;
+  top: 1em;
+  left: 0.8em;
+
+  // need one for big screens and for smaller screens
+  @include media(">=815px", "<desktop") {
+    border:5px solid green;
+  }
+
+  @include media(">=desktop") {
+    border:5px solid #fab;
+    // top: -0;
+    // left: -8em;
+  }
+  
+}
+
+
+.cat-wrapper {
+  position: relative;
+  width:40%;
+  left: 10%;
+  // display: inline;
+  border: 2px solid olive;
+  
+}
+.cat-img {
+  position: relative;
+  
+  min-height: 148px;
+  min-width: 148px;
+  width:80%;
+  height: auto;
+  max-height: 303px;
+  max-width: 303px;
+  border-radius: 2000px;
+
+  box-shadow: 12px 8px 0 0px white,
+  14px 6px 0 0px blue,
+  14px 10px 0 0px blue,
+  10px 10px 0 0px blue;
+
+  top: 3em;
+  @include media("<=phone") {
+    border:5px solid lightseagreen;
+   
+  }
+
+  @include media(">phone") {
+    border:5px solid purple;
+  
+  }
+
+  @include media(">=815px", "<desktop") {
+    border:5px solid green;
+ 
+  }
+
+  @include media(">=desktop") {
+    border:5px solid #fab;
+
   }
 }
 
 .bunny-img {
   position: relative;
   // left: -240px;
-  top: 8rem;
-  left: 8rem;
+  top: 1rem;
+  // left: 8rem;
   min-height: 102px;
   min-width: 81px;
-  width:18%;
+  width:40%;
   height: auto;
   max-height: 217px;
   max-width: 175px;
   border-radius: 2000px;
+  box-shadow: 12px 8px 0 0px white,
+  14px 6px 0 0px orange,
+  14px 10px 0 0px orange,
+  10px 10px 0 0px orange;
   @include media("<=phone") {
     border:5px solid lightseagreen;
-    left: 2rem;
+    // left: 2rem;
     // max-height: 100px;
     // max-width: 75px;
-  
   }
 
   @include media(">phone") {
     border:5px solid purple;
-    
-   
   }
 
   @include media(">=815px", "<desktop") {
     border:5px solid green;
-    
-     
   }
 
   @include media(">=desktop") {
     border:5px solid #fab;
-    // top: 200px;;
-    // left: -350px;
   }
+}
+
+#sparkle2 {
+  position: relative;
+  max-width: 34px;
+  max-height: 37px;
+  width: 40%;
+  left: -1.2em;
+  top: -1em;
+}
+
+// === homepage ====
+.hero-title {
+  color: $primary;
+  //font-size: 64px;
+  
+  @include media("<=phone") {
+    border:5px solid lightseagreen;
+    //font-size: 3.5rem;
+  }
+
+  // @include media(">phone") {
+  //   border:5px solid purple;
+  //   font-size: 2rem;
+  // }
+
+  // @include media(">=815px", "<desktop") {
+  //   border:5px solid green;
+  // }
+
+  @include media(">=desktop") {
+    border:5px solid #fab;
+    font-size: 2.8rem;
+  }
+
+  @include media(">=1200px") {
+    border: 5px solid lightgreen;
+    font-size: 3.5rem;
+  }
+
+}
+.slogan-text {
+  color: $other-color;
+  //font-size: 32px;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  //font-size: 28px;
+}
+
+
+// ==== Services Section ====
+
+.services-content {
+  font-size: .8em;
+}
+
+#paw-deco-img {
+  position: absolute;
+  max-width: 1174.75px;
+  max-height: 198.11px;
+  width: 100%;
+  z-index: -1;
+  right: 0;
+  left: 120px;
+  top: 1000px;
+}
+
+#paw-trail-img {
+  position: absolute;
+  max-width: 1245px;
+  max-height: 369.62px;
+  width: 100%;
+  
+  z-index: -1;
+  // border: 3px solid red;
+  left: 120px;
+  right: 0;
+  bottom: -800px;
+}
+
+.cards-wrapper {
+
+  @include media("<=phone") {
+    border:5px solid yellow!important;
+    
+   
+  }
+
+  
+  @include media(">phone") {
+    border:5px solid purple!important;
+    margin-right: 50px;
+    margin-left: 50px;
+    
+    
+    
+  }
+  @include media(">=815px", "<desktop") {
+    border:5px solid green;
+    
+    
+     
+  }
+  @include media(">=desktop") {
+    border:5px solid aqua;
+    
+    
+
+  }
+
+}
+
+
+
+.card {
+  margin-right: auto!important;
+  margin-left: auto!important;
+  // border: 1px solid red!important;
+  @include media("<=phone") {
+    border:5px solid yellow!important;
+    font-size: 1rem!important;
+   
+  }
+
+  
+  @include media(">phone") {
+    border:5px solid purple!important;
+    // max-height: 400px!important;
+    // height: 400px!important;
+    min-height: 278px!important;
+    width: 100%;
+    height: 278px!important;;
+    // max-width: 253px!important;
+    max-height: 278px!important;
+    font-size: .85rem!important;
+    padding: 50px;
+    //font-size: 60%!important;
+    
+  }
+  @include media(">=815px", "<desktop") {
+    border:5px solid green;
+    
+    
+     
+  }
+  @include media(">=desktop") {
+    border:5px solid aqua;
+    min-height: 278px!important;
+    width: 100%;
+    height: 278px!important;;
+    // max-width: 253px!important;
+    max-height: 278px!important;
+    font-size: 1rem!important;
+    padding: 50px;
+    
+
+  }
+ 
+}
+
+// === About Us Section =====
+
+.au-content-wrapper {
+  position: relative;
+  // left: 20%;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+}
+
+.dog-wrapper {
+  position: relative;
+  border: 1px solid orange;
+  width:30%;
+}
+
+#blue-sparkles{
+  position: relative;
+  max-width: 84px;
+  max-height: 96px;
+  z-index: 2;
+}
+
+.dog-glasses-img {
+  position: relative;
+  min-height: 175px;
+  min-width: 145px;
+  width: 100%;
+  height: auto;
+  max-height: 569px;
+  max-width: 470px;
+  border-radius: 2000px;
+
+  // left: -10%;
+  // top: -50%;
+  top: -2em;
+
+
+  box-shadow: 12px 8px 0 0px white,
+  14px 6px 0 0px orange,
+  14px 10px 0 0px orange,
+  10px 10px 0 0px orange;
+}
+
+.au-content {
+  position: relative;
+  // left: 10px;
+  // top: 10px;
+  border: 1px solid blue;
+  width: 80%;
+  max-width: 746px;
+  font-size: 1rem;
+}
+
+.quote {
+  position: relative;
+  background-color: $info;
+  font-size: 1rem;
+  color: $body-bg;
+  border-radius: 10px;
+  padding: 25px;
+
+  width: 100%;
+  max-width: 839px;
+  z-index: 2;
+}
+
+// === Contact page styling ====
+.old-logo {
+  position: relative;
+  left: 80%;
+  right: 0;
+  top: 15%;
+  min-width: 87.52px;
+  width: 18%;
+  max-width: 220px;
+  z-index:2;
+}
+
+
+// ===== Adopt Section =====
+
+.adopt-section {
+  background: rgba(102, 153, 204, 1);
+  border-radius: 10px;
+}
+
+
+.adopt-resource-wrapper {
+  font-size: 1rem;
+}
+
+
+// === Dog Page ===
+
+.dog-img-wrapper {
+  position: relative;
+  border: 1px solid aqua;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  top: -100px;
+
+}
+
+#bone-circle {
+  position: inherit;
+  max-width: 94px;
+  max-height: 94px;
+  width: 100%;
+  z-index: 2;
+  top: 200px;
+  left: -10px;
+}
+#dpaw1 {
+  position: inherit;
+  max-width: 88.02px;
+  max-height: 65.81px;
+  width: 100%;
+  top: 200px;
+  left: 325px;
+}
+
+#corgi-img {
+  position: inherit;
+  max-width: 427px;
+  max-height: 644px;
+  border-radius: 2000px;
+  box-shadow: 12px 8px 0 0px white,
+  14px 6px 0 0px $orange,
+  14px 10px 0 0px $orange,
+  10px 10px 0 0px $orange;
+  // width: 18%;
+  width: 100%;
+}
+
+#dheart-circle {
+  position: inherit;
+  max-width: 87px;
+  max-height: 87px;
+  width: 100%;
+  z-index: 2;
+  left: 325px;
+  top: -100px;
+}
+
+#dpaw2 {
+  position: inherit;
+  max-width: 67.74px;
+  max-height: 50.65px;
+  width: 100%;
+  right: 50px;
+  top: -20px;
+}
+
+.contact-banner {
+  background-color: $info;
+  border-radius: 10px;
+  max-height: 287px;
+}
+
+.banner-img-wrapper {
+  //border: 1px solid yellow;
+  position: relative;
+}
+
+#blue-fade-sparkle {
+  position: inherit;
+  max-width: 59px;
+  max-height: 66px;
+  width: 100%;
+  z-index: 3;
+
+  top: -85px;
+  right: 30px;
+}
+
+#schnouzer {
+  position: inherit;
+  max-width: 235px;
+  max-height: 353px;
+  width: 100%;
+  border-radius: 2000px;
+  z-index: 2;
+  box-shadow: 12px 8px 0 0px $info,
+  14px 6px 0 0px white,
+  14px 10px 0 0px white,
+  10px 10px 0 0px white;
+
+  top: -150px;
+  right: 20px;
+}
+
+// ==== Cat page
+#cheart-circle {
+  position: inherit;
+  max-width: 87px;
+  max-height: 87px;
+  width: 100%;
+  z-index: 2;
+  // left: 325px;
+  // top: -100px;
+}
+
+#orange-cat {
+  position: inherit;
+  max-width: 611px;
+  max-height: 611px;
+  width: 100%;
+  box-shadow: 12px 8px 0 0px white,
+  14px 6px 0 0px $orange,
+  14px 10px 0 0px $orange,
+  10px 10px 0 0px $orange;
+  border-radius: 2000px;
+  
+  // top: 200px;
+  // left: 325px;
+}
+
+#fish-circle {
+  position: inherit;
+  max-width: 94px;
+  max-height: 94px;
+  width: 100%;
+  z-index: 2;
+  // top: 200px;
+  // left: -10px;
+}
+
+#pink-cat {
+  position: inherit;
+  max-width: 297px;
+  max-height: 359px;
+  width: 100%;
+  // height: 120%;
+  border-radius: 2000px;
+  z-index: 2;
+  box-shadow: 12px 8px 0 0px $info,
+  14px 6px 0 0px white,
+  14px 10px 0 0px white,
+  10px 10px 0 0px white;
+
+  top: -100px;
+  right: 30px;
 }

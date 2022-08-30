@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Paradigm Professionals</title>
     <link rel="stylesheet" href="dist/main.css">
+    <!-- <link rel="stylesheet" href="dist/bootstrap-icons.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <style>
         .include-media-test {
           width: 100%;
@@ -45,13 +47,13 @@
               </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="pages/contact.html">Contact</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">FAQs</a>
+                <a class="nav-link" href="pages/faqs.html">FAQs</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -60,71 +62,103 @@
           </form>
         </div>
     </nav>
-    <section class="row mt-5">
+    <section class="row">
         <div class="col-lg-5 col-md-5 col-sm-12">
-            <h1>PARADIGM <span class="text-info">PET</span> PROFESSIONALS</h1>
-            <p>Evidence-based pet care advice for every pet lover</p>
-            <p>PARADIGM PET PROFESSIONALS has <span class="text-info">12 years’ experience</span> working with pet owners, certifications in pet health and nutrition, and customer recognition for outstanding support </p>
+            <!-- <span><img class="hero-logo-img" src="img/logo.png" alt=""></span> -->
+            <h1 class="hero-title">PARADIGM <span class="text-info">PET</span> PROFESSIONALS </h1>
+            <p class="slogan-text">Evidence-based pet care advice for every pet lover</p>
+            <p class="hero-text">PARADIGM PET PROFESSIONALS has <span class="text-info">12 years’ experience</span> working with pet owners, certifications in pet health and nutrition, and customer recognition for outstanding support </p>
+            <button class="btn btn-primary">CONSULT A PEXPERT <span><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg></span></button>
         </div>
         <div class="col-lg-7 col-md-7 col-sm-12">
             <div class="hero-img-wrapper">
-                <img class="bunny-img" src="img/rabbit.jpeg" alt="">
-                <img class="pug-img" src="img/pug-yellow.jpeg" alt="">
-                
-                <img class="cat-img" src="img/cat-blue.jpeg" alt="">
-               
+               <div class="pug-wrapper">
+                    <img id="sparkles1" src="img/sparkles.png" alt="white-sparkle">
+                    <img class="pug-img" src="img/pug-yellow.jpeg" alt="pug-pic">
+                    <img id="paw1" src="img/paw1.png" alt="">
+                    <img class="bunny-img" src="img/rabbit.jpeg" alt="bunny-pic">
+                    <img id="sparkle2" src="img/blue-sparkle.png" alt="blue-sparkle">
+               </div>
+               <div class="cat-wrapper">
+                    <img id="paw2" src="img/paw1.png" alt="">
+                    <img class="cat-img" src="img/cat-blue.jpeg" alt="">
+                </div>
             </div>
         </div>
     </section>
-    <section class="row mt-5">
+    <section class="row">
         <div class="col text-center">
-            <p class="text-primary">Looking for basic pet care advice for the most common type of pets? Need additional help determining which type of pet is right for you and your family? </p>
-            <h3 class="text-info">Our Services</h3>
-            <p>We will work with you and provide tailored evidence-based pet care to ensure lifelong health and wellness of your new companion.</p>
-            <div class="row text-center">
+            <img id="paw-deco-img" src="img/paw-deco.png" alt="">
+            <h3 class="text-primary">Looking for basic pet care advice for the most common type of pets? Need additional help determining which type of pet is right for you and your family? </h3>
+            <img id="paw-trail-img" src="img/paw-trail.png" alt="">
+            <h2 class="text-info section-title">Our Services</h2>
+            <p class="services-content">We will work with you and provide tailored evidence-based pet care to ensure lifelong health and wellness of your new companion.</p>
+            <div class="row text-center cards-wrapper">
                 <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <div class="card m-0">
-                        <div class="card-body">
-                          <!-- <h5 class="card-title">Card title</h5> -->
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card m-0 text-center">
+                        <div class="card-body p-0">
+                         <div class="text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" fill="currentColor" class="bi bi-person-video2" viewBox="0 0 16 16">
+                                <path d="M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                                <path d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2ZM1 3a1 1 0 0 1 1-1h2v2H1V3Zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3H5Zm-4-2h3v2H2a1 1 0 0 1-1-1v-1Zm3-1H1V8h3v2Zm0-3H1V5h3v2Z"/>
+                            </svg>
+                         </div> 
+                          <p class="card-text">virtual consultations and presentations</p>
+                        </div>
+                     </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="card m-0 text-center">
+                        <div class="card-body p-0">
+                            <div class="text-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
+                                    <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+                                </svg>
+                            </div> 
+                          <p class="card-text">one-on-one consultations concerning individual pets</p>
                         </div>
                       </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="card m-0">
-                        <div class="card-body">
-                          <!-- <h5 class="card-title">Card title</h5> -->
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="card m-0">
-                        <div class="card-body">
-                          <!-- <h5 class="card-title">Card title</h5> -->
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="card m-0 text-center">
+                        <div class="card-body p-0">
+                            <div class="text-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" fill="currentColor" class="bi bi-easel" viewBox="0 0 16 16">
+                                    <path d="M8 0a.5.5 0 0 1 .473.337L9.046 2H14a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1.85l1.323 3.837a.5.5 0 1 1-.946.326L11.092 11H8.5v3a.5.5 0 0 1-1 0v-3H4.908l-1.435 4.163a.5.5 0 1 1-.946-.326L3.85 11H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h4.954L7.527.337A.5.5 0 0 1 8 0zM2 3v7h12V3H2z"/>
+                                </svg>
+                            </div> 
+                          <p class="card-text">group presentations regarding general pet care (can be tailored to the needs of the group)s</p>
                         </div>
                       </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="row mt-5">
-        <div class="col">
-            <img class="hero-img" src="img/dog-glasses.jpeg" alt="dog-glasses">
-            <div>
-                <p>“Pets are nature's gift to humanity. It has been scientifically proven that opening our homes and hearts to a pet increases our longevity and improves our overall quality of life as well as the lives of our pets.”</p>
-                <small>- Pet ParadigmProfessionals</small>
-            </div>
-            <div>
-                <h3 class="text-primary">About Us</h3>
-                <p>At Pet Paradigm Professionals, our mission is to offer resources to help you care for your furry, scaly, feathery, and slimy loved ones. Our pet experts—or <strong>“Pexperts”</strong>—have been working with pet owners and professionals alike for the past twelve years. They offer one-on-one consultations with current and prospective pet owners as well as group presentations designed for veterinary, pet shelter, and pet breeding professionals.</p>
+    <section class="row" style="border: 3px solid purple;">
+        <div class="col p-0">
+            <div class="au-content-wrapper">
+                <div class="dog-wrapper">
+                    <img id="blue-sparkles" src="img/blue-sparkles.png" alt="">
+                    <img class="dog-glasses-img" src="img/dog-glasses.jpeg" alt="dog-glasses">
+                </div>
+                 <div class="au-content">
+                    <div class="quote">
+                        <p>“Pets are nature's gift to humanity. It has been scientifically proven that opening our homes and hearts to a pet increases our longevity and improves our overall quality of life as well as the lives of our pets.”</p>
+                        <small>- Pet ParadigmProfessionals</small>
+                     </div>
+                     <div class="px-3">
+                        <h3 class="text-primary section-title">About Us</h3>
+                        <p>At Pet Paradigm Professionals, our mission is to offer resources to help you care for your furry, scaly, feathery, and slimy loved ones. Our pet experts—or <strong>“Pexperts”</strong>—have been working with pet owners and professionals alike for the past twelve years. They offer one-on-one consultations with current and prospective pet owners as well as group presentations designed for veterinary, pet shelter, and pet breeding professionals.</p>
+                     </div>
+                 </div>
             </div>
         </div>
     </section>
-    <section class="row mt-5">
+    <section class="row adopt-section">
         <div class="col-lg-6 col-md-6 col-sm-12">
-            <h3>Looking for your new best friend?</h3>
+            <h3 class="text-white">Looking for your new best friend?</h3>
             <img class="hero-img" src="img/dog-girl.jpeg" alt="">
             <p>
                 <strong>We are also happy to help you navigate the adoption process!</strong> 
@@ -134,7 +168,7 @@
         <div class="col-lg-6 col-md-6 col-sm-12">
             <strong>contact form goes here</strong>
         </div>
-        <div class="m-0">
+        <div class="m-0 adopt-resource-wrapper">
             <p>The following organizations can aslo help you find and adopt the perfect companion:</p>
             <ul>
                 <li>General Adoption Resources: https://theshelterpetproject.org/ </li>
@@ -144,6 +178,13 @@
                 <li>Bird Rescue: https://ftlob.rescuegroups.org/  </li>
             </ul>
         </div>
+    </section>
+    <section class="grid">
+       
+        <div class="g-col-4">.g-col-4</div>
+        <div class="g-col-4">.g-col-4</div>
+        <div class="g-col-4">.g-col-4</div>
+      
     </section> 
     <footer>
         I am the footer

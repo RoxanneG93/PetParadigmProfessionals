@@ -1,0 +1,54 @@
+// style="max-width: 987px; max-height: 1283px;"
+.contact-form-wrapper {
+    
+    @include media("<=phone") {
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include media(">=815px", "<desktop") {
+        padding-left: 15%;
+        padding-right: 15%;
+        
+    }
+    @include media(">=desktop") {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+   
+}
+.contact-form {
+    
+    border-radius: 10px;
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1;
+    
+    @include media("<=phone") {
+        width: 100%;
+        margin: 0px;
+        padding: 25px;
+    }
+
+    @include media(">phone") {
+        width: 100%;
+        margin: 0px;
+        padding: 25px;
+    }
+
+    @include media(">=815px", "<desktop") {
+        max-width: 800px;
+        width: 95%;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    
+    @include media(">=desktop") {
+        width: 90%;
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+
+}
