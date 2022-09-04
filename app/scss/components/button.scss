@@ -32,3 +32,89 @@
     text-transform: uppercase!important;
   	text-decoration: none!important;
 }
+
+// Main wrap
+.buttons {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+// Button wrap
+.container { 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    text-align: center; 
+    
+    @media (min-width: 600px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+//default button
+.call-btn {
+    color: #fff;
+    cursor: pointer;
+    // display: block;
+    font-size:16px;
+    font-weight: 400;
+    line-height: 45px;
+    margin: 0 0 2em;
+    max-width: 160px; 
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%; 
+        
+    // @media(min-width: 600px) {
+        
+    //   margin: 0 1em 2em;
+      
+    // }
+    
+    &:hover { text-decoration: none; }
+    
+}
+
+.call-btn {
+    letter-spacing: 0;
+}
+
+.call-btn:hover,
+.call-btn:active {
+  letter-spacing: 5px;
+}
+
+.call-btn:after,
+.call-btn:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.call-btn:hover:after,
+.call-btn:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.call-btn:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}

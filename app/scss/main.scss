@@ -79,7 +79,6 @@ section p {
 }
 
 
-
 .hero-logo-img {
   position: absolute;
   max-width: 105px;
@@ -663,11 +662,82 @@ section p {
 .adopt-section {
   background: rgba(102, 153, 204, 1);
   border-radius: 10px;
+  font-size: 1em;
+  max-height: 928px;
 }
 
 
 .adopt-resource-wrapper {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  position: relative;
+  border: 3px solid yellow;
+  top: -30em;
+
+}
+
+.adopt-pic-wrapper {
+  border: 3px solid pink;
+  height: 30%;
+  padding-top: 25px;
+  position: relative;
+  max-height: 140px;
+}
+
+#adopt-img {
+  position: inherit;
+  max-width: 344px;
+  max-height: 427px;
+  width: 12em;
+  height: 14em;
+  top: -150px;
+  // height: 40%;
+  border-radius: 1500px;
+  box-shadow: 12px 8px 0 0px white,
+  14px 6px 0 0px $orange,
+  14px 10px 0 0px $orange,
+  10px 10px 0 0px $orange;
+
+}
+
+#adopt-heart-circle {
+  position: inherit;
+  max-width: 40px;
+  max-height: 40px;
+  top: -30px;
+  //width: 100%;
+  z-index: 2;
+  //left: 325px;
+  //top: -100px;
+}
+
+.form-heading {
+  max-height: 50px;
+}
+
+#contact-form-homepage {
+  // max-width: 40px;
+  // max-height: 40px;
+  max-height: 808.91px;
+  border-radius: 10px;
+  padding: 20px;
+   
+  // margin-right: auto;
+  //   margin-left: auto;
+  z-index: 1;
+  
+}
+#homepage-old-logo {
+  position: relative;
+  // left: 80%;
+  // right: 0;
+  // top: 15%;
+  min-width: 87.52px;
+  width: 18%;
+  max-width: 220px;
+  z-index:2;
+  top: -100px;
+  right: 30px;
+
 }
 
 
