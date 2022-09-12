@@ -1,29 +1,26 @@
 
-.hero-img{ // this is actually the nav logo
-    height: 50px;
-    width: 100px;
+.ppp-nav-logo{ // this is actually the nav logo
+    height: 71px;
+    width: 181px;
+}
+
+.ppp-footer-logo{
+  max-height: 133px;
+  max-width: 339px;
+  width: 100%;
 }
 .navbar {
     background: $body-bg!important;
     color: $primary!important;
+    font-size: 1.2em!important;
   }
   
   .nav-item {
     background: $body-bg!important;
     color: $primary!important;
+
   }
   
-  .nav-item.active {
-    // background: $body-bg!important;
-    // color: pink!important;
-    .nav-link{
-  
-      // border-bottom: 1px solid green;
-      // border-width: 80%;
-    }
-    // padding-bottom: 0px;
-    // border-bottom: 1px solid $primary;
-  }
   
   .nav-link {
     // background: $body-bg!important;
@@ -31,17 +28,77 @@
   }
   
   .nav-link{
-      display: inline-block;
-    padding: .5em 1em;
+    display: inline-block;
+    padding: .74em 1em;
     border-radius: 0;
-      //color: #b2876f;
-    // margin-top:2rem;
-    //font-weight: bold;
-    //font-size: 0.678rem;
-    //letter-spacing: 2px;
-    //text-transform: uppercase;
     text-decoration: none;
-      position: relative;
+    position: relative;
+    &:before,
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 1px;
+        width: 0;
+    }
+    &:before{
+      transition: width 0s ease,background .4s ease;
+      left: 0;
+      right: 0;
+      bottom: 8px;
+    }
+    &:after{
+      right: 10%;
+      bottom: 6px;
+      background: $info;
+      transition: width .4s ease;
+    }
+      
+    &:hover{
+        &:before{
+          width: 97.8%;
+          background: $info;
+          transition: width .4s ease;
+        }
+        &:after{
+          width: 97.8%;
+          background: 0 0;
+          transition: all 0s ease;
+        }
+    }
+    &.dropdown-toggle {
+      &:before,
+      &:after{
+          background: none;
+          content: '';
+          display: block;
+          position: absolute;
+          height: 1px;
+          width: 0;
+      }
+      &:hover{
+        &:before{
+          width: 97.8%;
+          background: $info;
+          transition: width .4s ease;
+        }
+      }
+      &.active {
+        padding-bottom: 5px;
+        border-bottom: 1px solid $info;
+        &:before,
+        &:after{
+            content: '';
+            display: block;
+            position: absolute;
+            height: 1px;
+            width: 0;
+        }
+      }
+    }
+    &.active {
+      padding-bottom: 5px;
+      border-bottom: 1px solid $info;
       &:before,
       &:after{
           content: '';
@@ -49,32 +106,27 @@
           position: absolute;
           height: 1px;
           width: 0;
-  
       }
-      &:before{
-          transition: width 0s ease,background .4s ease;
-          left: 0;
-          right: 0;
-      bottom: 6px;
-      }
-      &:after{
-          right: 10%;
-      bottom: 6px;
-      background: $info;
-          transition: width .4s ease;
-      }
-      
-      &:hover{
-          &:before{
-              //width: 97.8%;
-        width: 80%;
-              background: $info;
-          transition: width .4s ease;
-          }
-          &:after{
-              width: 80%;
-          background: 0 0;
-              transition: all 0s ease;
-          }
-      }
+    }
+    
   }
+
+.search-input-wrapper {
+  border-radius: 20px;
+  max-width: 231px;
+  max-height: 52px;
+  background-color: #D9D9D9;
+  color: $primary;
+  margin-top: 10px;
+
+  & input {
+    text-decoration: none;
+    border: none;
+    background-color: #D9D9D9;
+    color: $primary;
+  }
+
+  & input:focus {
+    outline: none;
+  }
+}

@@ -4,15 +4,15 @@
 
 .form-btn{
 	display: inline-block;
-  	padding: .8em 2.5em;
-  	border-radius: 50px;
+  padding: .8em 2.5em;
+  border-radius: 50px;
 	color: white;
-  	margin-top:2rem;
-  	font-weight: bold;
-  	font-size: 1rem;
-  	letter-spacing: 2px;
-  	text-transform: uppercase;
-  	text-decoration: none;
+  margin-top:2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
 	background: linear-gradient(to right, rgba(white, 0) 25%, rgba(white, 1) 75%);
 	background-position: 1% 50%;
 	background-size: 400% 300%;
@@ -43,78 +43,82 @@
     width: 100%;
 }
 
-// Button wrap
-.container { 
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1em;
-    text-align: center; 
-    
-    @media (min-width: 600px) {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
 
 //default button
-.call-btn {
-    color: #fff;
-    cursor: pointer;
-    // display: block;
-    font-size:16px;
-    font-weight: 400;
-    line-height: 45px;
-    margin: 0 0 2em;
-    max-width: 160px; 
-    position: relative;
-    text-decoration: none;
-    text-transform: uppercase;
-    width: 100%; 
-        
-    // @media(min-width: 600px) {
-        
-    //   margin: 0 1em 2em;
-      
-    // }
+.btn-primary {
+  padding: .8em 1.5em!important;
+  border-radius: 50px!important;
+  text-transform: uppercase!important;
+  text-decoration: none!important;
+  font-size: 1.2em;
+
+  background: rgba(white, 0);
+  border-bottom: 1px solid;
+  color: white;
+  // line-height: 1.4;
+  //padding: .25em;
+  text-decoration: none;
     
-    &:hover { text-decoration: none; }
-    
+  &:hover {
+    background: rgba(white, 1);
+    color: $primary;
+  }
 }
 
-.call-btn {
-    letter-spacing: 0;
+
+/// new button style
+.btn-primary {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover { text-decoration: none; }
+  
 }
 
-.call-btn:hover,
-.call-btn:active {
-  letter-spacing: 5px;
+.btn-primary {
+  background: lighten($primary, 3%);  
+  border: 1px solid darken($primary, 4%);
+  box-shadow: 0px 2px 0 darken($primary, 4%), 2px 4px 4px darken($primary, 2%);
+  //font-weight: 900;
+  //letter-spacing: 1px;
+  transition: all 150ms linear;
 }
 
-.call-btn:after,
-.call-btn:before {
-  backface-visibility: hidden;
-  border: 1px solid rgba(#fff, 0);
-  bottom: 0px;
-  content: " ";
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  transition: all 280ms ease-in-out;
-  width: 0;
+.btn-primary:hover {
+  background: darken($primary, 1.5%);
+  border: 1px solid rgba(#000, .05);
+  box-shadow: 1px 1px 2px rgba(#fff, .2);
+  color: lighten($info, 18%); 
+  text-decoration: none;
+  text-shadow: -1px -1px 0 darken($primary, 9.5%);
+  transition: all 250ms linear;
 }
 
-.call-btn:hover:after,
-.call-btn:hover:before {
-  backface-visibility: hidden;
-  border-color: #fff;
-  transition: width 350ms ease-in-out;
-  width: 70%;
+.btn-light {
+  color: $primary;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover { text-decoration: none; }
+  
 }
 
-.call-btn:hover:before {
-  bottom: auto;
-  top: 0;
-  width: 70%;
+.btn-light {
+  background: lighten(white, 3%);  
+  border: 1px solid darken($info, 4%);
+  box-shadow: 0px 2px 0 darken($info, 4%), 2px 4px 4px darken($info, 2%);
+  //font-weight: 900;
+  //letter-spacing: 1px;
+  transition: all 150ms linear;
+}
+
+.btn-light:hover {
+  background: darken(white, 1.5%);
+  border: 1px solid rgba(#000, .05);
+  box-shadow: 1px 1px 2px rgba(#fff, .2);
+  color: lighten($primary, 10%); 
+  text-decoration: none;
+  text-shadow: -1px -1px 0 darken(white, 9.5%);
+  transition: all 250ms linear;
 }
